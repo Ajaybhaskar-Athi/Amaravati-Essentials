@@ -30,7 +30,7 @@ app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/upload', uploadRouter);
 
-const publicFolder = path.join(__dirname, 'public');
+const publicFolder = path.join(__dirname, '../public');
 app.use(express.static(publicFolder));
 
 app.get('*', (req, res) => {
