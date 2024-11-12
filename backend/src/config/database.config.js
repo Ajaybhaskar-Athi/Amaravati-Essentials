@@ -10,7 +10,7 @@ set("strictQuery", true);
 export const dbconnect = async () => {
   try {
     connect(
-      "mongodb+srv://ajaybhaskarathi:YGy9TtWPepqLnQ57@cluster0.inm18.mongodb.net/",
+    process.env.MONGO_DB_URL,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

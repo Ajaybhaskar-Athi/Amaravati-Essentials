@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.footerCol}>
-            <h4>Amaravti Essentials </h4>
+            <h4>Amaravati Essentials </h4>
             <ul>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Our Story</a></li>
