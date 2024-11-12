@@ -3,19 +3,19 @@ import { UserModel } from "../models/user.model.js";
 import { FoodModel } from "../models/food.model.js";
 import { sample_users } from "../data.js";
 import { sample_foods } from "../data.js";
+import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 const PASSWORD_HASH_SALT_ROUNDS = 10;
 set("strictQuery", true);
 
 export const dbconnect = async () => {
+  console.log("MONGO_URI:", process.env.MONGO_URI); // Debugging line
+  if (!process.env.MONGO_URI) {
+    console.error("Error: MONGO_URI is not defined in environment variables");
+    return;
+  }
   try {
-    connect(
-    process.env.MONGO_URI,
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }
-    );
+    await mongoose.connect(process.env.MONGO_URI);
     await seedUsers();
     await seedFoods();
     console.log("connect successfully---");
