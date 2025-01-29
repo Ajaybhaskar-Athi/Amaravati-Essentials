@@ -15,6 +15,7 @@ export const AuthProvider = ({ children }) => {
     } catch (err) {
       toast.error(err.response.data);
     }
+    
   };
 
   const register = async data => {

@@ -24,6 +24,7 @@ const reducer = (state, action) => {
   }
 };
 
+
 export default function HomePage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { foods, tags } = state;
@@ -44,7 +45,7 @@ export default function HomePage() {
   return (
     <>
       <Search />
-      <Tags tags={tags} />
+      {/* <Tags tags={tags} /> */}
       {foods.length === 0 && <NotFound linkText="Reset Search" />}
       <Thumbnails foods={foods} />
     </>

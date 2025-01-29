@@ -9,9 +9,10 @@ import { pay } from '../../services/orderService';
 import { useCart } from '../../hooks/useCart';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+//client ID:  'AUWcnaHjOUoXVI3IjLpMkM0Kk0Sigq1CUAWP-finHI950yQD2Qni8XPkRbs76Q-_JIT8hJFhKD8YVy3u'
 
 export default function PaypalButtons({ order }) {
-  return (
+  return (  
     <PayPalScriptProvider
       options={{
         clientId:

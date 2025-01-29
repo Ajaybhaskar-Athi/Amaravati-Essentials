@@ -32,6 +32,17 @@ export default function CheckoutPage() {
 
     await createOrder({ ...order, name: data.name, address: data.address });
     navigate('/payment');
+    // if (!data.name || !data.address) {
+    //   toast.warning('Please fill out all required fields.');
+    //   return;
+    // }
+
+    // try {
+    //   await createOrder({ ...order, name: data.name, address: data.address });
+    //   navigate('/payment'); // Navigate to payment page after successful order creation
+    // } catch (error) {
+    //   toast.error('There was an issue with creating your order. Please try again.');
+    // }
   };
 
   return (
@@ -55,16 +66,16 @@ export default function CheckoutPage() {
           </div>
           <OrderItemsList order={order} />
         </div>
-        <div>
-          <Title title="Choose Your Location" fontSize="1.6rem" />
-          <Map
-            location={order.addressLatLng}
-            onChange={latlng => {
-              console.log(latlng);
-              setOrder({ ...order, addressLatLng: latlng });
-            }}
-          />
-        </div>
+          <div>
+            <Title title="Choose Your Location" fontSize="1.6rem" />
+            <Map
+              location={order.addressLatLng}
+              onChange={latlng => {
+                console.log(latlng);
+                setOrder({ ...order, addressLatLng: latlng });
+              }}
+            />
+          </div>
 
         <div className={classes.buttons_container}>
           <div className={classes.buttons}>
