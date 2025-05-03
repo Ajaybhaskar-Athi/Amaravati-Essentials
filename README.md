@@ -95,11 +95,10 @@ npm start
 ## 🙋‍♂️ Author
 
 **Ajay Bhaskar**
-FullStackc Developer | MERN Stack Enthusiast
+FullStacck Developer | MERN Stack Enthusiast
 [LinkedIn](https://www.linkedin.com/in/ajaybhaskar-athi/) 
 
 
 
-```
 
 
